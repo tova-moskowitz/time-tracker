@@ -1,6 +1,6 @@
 import "../style/App.css";
 import React, { useState } from "react";
-import SVG from "./SVG";
+import SVG from "./Icons";
 
 function Card({ title, icon }) {
   const titleClass = title.toLowerCase().replace(" ", "");

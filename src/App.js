@@ -3,7 +3,7 @@ import "./style/App.css";
 import data from "./data/data.json";
 import Card from "./components/Card";
 import UserProfileCard from "./components/UserProfileCard";
-import { WorkIcon } from "./components/SVG";
+import { WorkIcon } from "./components/Icons";
 
 function App() {
   const [user, setUser] = useState("Tova");
