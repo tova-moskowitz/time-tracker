@@ -1,15 +1,14 @@
 import "../style/App.css";
 import React, { useState } from "react";
-import SVG from "./Icons";
 
-function Card({ title, icon }) {
+function Card({ title, iconComponent }) {
   const titleClass = title.toLowerCase().replace(" ", "");
-  console.log(icon);
+  const Icon = iconComponent;
+
   return (
     <div className={`card ${titleClass}`}>
       <div className="icon">
-        <SVG title={title} icon={icon} />
-        {/* <img src={"../images/icon-self-care.svg"} alt="" /> */}
+        <Icon />
       </div>
       <div className="title">{title}</div>
     </div>
