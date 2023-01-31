@@ -7,15 +7,13 @@ import exerciseIconSrc from "../images/icon-exercise.svg";
 import socialIconSrc from "../images/icon-social.svg";
 import selfCareIconSrc from "../images/icon-self-care.svg";
 
-function SVG({ icon }) {
+function Icon({ icon }) {
   return <img src={icon} alt="icon" />;
 }
 
-export default SVG;
-
-export const WorkIcon = () => <SVG icon={workIconSrc} />;
-export const PlayIcon = () => <SVG icon={playIconSrc} />;
-export const StudyIcon = () => <SVG icon={studyIconSrc} />;
-export const ExerciseIcon = () => <SVG icon={exerciseIconSrc} />;
-export const SocialIcon = () => <SVG icon={socialIconSrc} />;
-export const SelfCareIcon = () => <SVG icon={selfCareIconSrc} />;
+export const WorkIcon = () => <Icon icon={workIconSrc} />;
+export const PlayIcon = () => <Icon icon={playIconSrc} />;
+export const StudyIcon = () => <Icon icon={studyIconSrc} />;
+export const ExerciseIcon = () => <Icon icon={exerciseIconSrc} />;
+export const SocialIcon = () => <Icon icon={socialIconSrc} />;
+export const SelfCareIcon = () => <Icon icon={selfCareIconSrc} />;
