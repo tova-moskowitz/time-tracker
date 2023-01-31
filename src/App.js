@@ -15,8 +15,6 @@ import {
 function App() {
   const [user, setUser] = useState("Tova");
   const icons = {
-    // Work: <WorkIcon />,
-    // Play: <PlayIcon />,
     Work: WorkIcon,
     Play: PlayIcon,
     Study: StudyIcon,
@@ -39,7 +37,9 @@ function App() {
         </div>
         <div className="cards">
           {data.map((type) => {
-            return <Card title={type.title} icon={WorkIcon} />;
+            return (
+              <Card title={type.title} iconComponent={icons[type.title]} />
+            );
           })}
         </div>
       </div>
