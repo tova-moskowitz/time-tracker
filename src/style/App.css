@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --light-red-work: hsl(15, 100%, 70%);
+  --soft-blue-play: hsl(195, 74%, 62%);
+  --light-red-study: hsl(348, 100%, 68%);
+  --lime-green-exercise: hsl(145, 58%, 55%);
+  --violet-social: hsl(264, 64%, 52%);
+  --soft-orange-self-care: hsl(43, 84%, 65%);
+  --very-dark-blue: hsl(226, 43%, 10%);
+  --dark-blue: hsl(235, 46%, 20%);
+  --desaturated-blue: hsl(235, 45%, 61%);
+  --pale-blue: hsl(236, 100%, 87%);
+  --font-card-titles: 18px;
+  --icon-card-width: 300px;
+  --icon-card-height: 100px;
+  --title-card-height: 200px;
+  --icon-card-border-radius: 15px;
+}
+body {
+  background: var(--very-dark-blue);
+  height: 100%;
+}
+
+.wrapper {
+  margin-top: 100px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+}
+
+.profileCard {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--icon-card-border-radius);
+  background: var(--blue);
+  color: var(--pale-blue);
+  width: 275px;
+  font-size: 40px;
+}
+.profile {
+  margin: 30px;
+}
+
+.profile p {
+  font-size: 18px;
+}
+
+.timeframes {
+  color: var(--pale-blue);
+  background: var(--dark-blue);
+  font-family: Rubik;
+  text-align: left;
+  padding: 20px;
+  border-radius: var(--icon-card-border-radius);
+}
+
+.cards {
+  margin: 0 5% 0 1.5%;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(3, 3fr);
+  gap: 55% 0.25rem;
+  width: 65%;
+}
+
+.card,
+.timeframes {
+  color: white;
+  font-family: Rubik;
+  font-weight: 700;
+  font-size: 18px;
+  border-radius: var(--icon-card-border-radius);
+  height: var(--icon-card-height);
+  margin-bottom: 20px;
+}
+
+.icon {
+  position: relative;
+}
+
+.icon img {
+  width: 25%;
+  position: absolute;
+  top: 0;
+  right: 10px;
+}
+
+.title {
+  width: var(--icon-card-width);
+  border-radius: var(--icon-card-border-radius);
+  height: var(--title-card-height);
+  background: var(--dark-blue);
+  margin-top: 50px;
+  padding: 20px 0 0 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.work {
+  background: var(--light-red-work);
+}
+.play {
+  background: var(--soft-blue-play);
+}
+.study {
+  background: var(--light-red-study);
+}
+.exercise {
+  background: var(--lime-green-exercise);
+}
+.social {
+  background: var(--violet-social);
+}
+.selfcare {
+  background: var(--soft-orange-self-care);
+}
