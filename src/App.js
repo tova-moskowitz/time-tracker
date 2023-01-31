@@ -3,19 +3,26 @@ import "./style/App.css";
 import data from "./data/data.json";
 import Card from "./components/Card";
 import UserProfileCard from "./components/UserProfileCard";
-import { WorkIcon } from "./components/Icons";
+import {
+  WorkIcon,
+  PlayIcon,
+  StudyIcon,
+  ExerciseIcon,
+  SocialIcon,
+  SelfCareIcon,
+} from "./components/Icons";
 
 function App() {
   const [user, setUser] = useState("Tova");
   const icons = {
     // Work: <WorkIcon />,
     // Play: <PlayIcon />,
-    Work: require("./images/icon-work.svg").default,
-    Play: require("./images/icon-play.svg").default,
-    Study: require("./images/icon-study.svg").default,
-    Exercise: require("./images/icon-exercise.svg").default,
-    Social: require("./images/icon-social.svg").default,
-    "Self Care": require("./images/icon-self-care.svg").default,
+    Work: WorkIcon,
+    Play: PlayIcon,
+    Study: StudyIcon,
+    Exercise: ExerciseIcon,
+    Social: SocialIcon,
+    "Self Care": SelfCareIcon,
   };
 
   return (
@@ -32,7 +39,7 @@ function App() {
         </div>
         <div className="cards">
           {data.map((type) => {
-            return <Card title={type.title} icon={icons[type.title]} />;
+            return <Card title={type.title} icon={WorkIcon} />;
           })}
         </div>
       </div>
