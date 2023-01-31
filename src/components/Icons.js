@@ -8,8 +8,7 @@ import socialIconSrc from "../images/icon-social.svg";
 import selfCareIconSrc from "../images/icon-self-care.svg";
 
 function SVG({ icon }) {
-  console.log({ workIconSrc });
-  return <img src="../images/icon-work.svg" alt="icon" />;
+  return <img src={icon} alt="icon" />;
 }
 
 export default SVG;
