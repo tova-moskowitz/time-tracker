@@ -29,15 +29,11 @@ function App() {
       <div className="wrapper">
         <div className="profileCard">
           <UserProfileCard user={user} />
-          <div className="timeframes">
-            <p className="daily">Daily</p>
-            <p className="weekly">Weekly</p>
-            <p className="monthly">Monthly</p>
-          </div>
         </div>
         <div className="cards">
           {data.map((type) => {
             return (
+              // <p>HELLO</p>
               <Card title={type.title} iconComponent={icons[type.title]} />
             );
           })}

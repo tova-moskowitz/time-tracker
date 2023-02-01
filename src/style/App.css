@@ -18,30 +18,27 @@
   --title-card-height: 200px;
   --icon-card-border-radius: 15px;
 }
+
 body {
   background: var(--very-dark-blue);
   height: 100%;
 }
 
 .wrapper {
-  margin-top: 100px;
-  display: flex;
-  justify-content: flex-end;
-  text-align: left;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  margin: 150px 200px;
 }
 
 .profileCard {
-  text-align: left;
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
   border-radius: var(--icon-card-border-radius);
   background: var(--blue);
   color: var(--pale-blue);
-  width: 275px;
   font-size: 40px;
-}
-.profile {
-  margin: 30px;
+  height: 380px;
 }
 
 .profile p {
@@ -49,6 +46,8 @@ body {
 }
 
 .timeframes {
+  z-index: -1;
+  position: relative;
   color: var(--pale-blue);
   background: var(--dark-blue);
   font-family: Rubik;
@@ -58,12 +57,10 @@ body {
 }
 
 .cards {
-  margin: 0 5% 0 1.5%;
+  margin-left: 30px;
   display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(3, 3fr);
-  gap: 55% 0.25rem;
-  width: 65%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
 }
 
 .card,
@@ -73,8 +70,9 @@ body {
   font-weight: 700;
   font-size: 18px;
   border-radius: var(--icon-card-border-radius);
-  height: var(--icon-card-height);
-  margin-bottom: 20px;
+}
+.timeframes {
+  margin-top: 247px;
 }
 
 .icon {
@@ -88,13 +86,23 @@ body {
   right: 10px;
 }
 
+.currentHours {
+  font-size: 65px;
+  font-weight: 400;
+  padding-left: 25px;
+  margin: 0;
+}
+
+.previousHours {
+  margin: 0 30px;
+  color: var(--pale-blue);
+}
+
 .title {
-  width: var(--icon-card-width);
   border-radius: var(--icon-card-border-radius);
   height: var(--title-card-height);
   background: var(--dark-blue);
-  margin-top: 50px;
-  padding: 20px 0 0 20px;
+  margin-top: 45px;
   position: relative;
   z-index: 1;
 }

@@ -5,6 +5,11 @@ function UserProfileCard({ user }) {
     <div className="profile">
       <p>Report For:</p>
       {user}
+      <div className="timeframes">
+        <p className="daily">Daily</p>
+        <p className="weekly">Weekly</p>
+        <p className="monthly">Monthly</p>
+      </div>
     </div>
   );
 }

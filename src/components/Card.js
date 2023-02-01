@@ -10,7 +10,13 @@ function Card({ title, iconComponent }) {
       <div className="icon">
         <Icon />
       </div>
-      <div className="title">{title}</div>
+      <div className="title">
+        {title}
+        <div className="hours">
+          <p className="currentHours">10hrs</p>
+          <p className="previousHours">Last Week: 2hrs</p>
+        </div>
+      </div>
     </div>
   );
 }
