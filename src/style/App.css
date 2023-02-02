@@ -27,7 +27,7 @@ body {
 
 .wrapper {
   display: grid;
-  grid-template-columns: 300px 1fr;
+  grid-template-columns: 325px 1fr;
   margin: 125px 200px;
 }
 
@@ -37,13 +37,22 @@ body {
   flex-direction: column;
   border-radius: var(--icon-card-border-radius);
   background: var(--blue);
-  color: var(--pale-blue);
-  font-size: 40px;
-  height: 380px;
+  /* color: var(--pale-blue); */
+  color: white;
+  font-size: 60px;
+  height: 390px;
+  padding: 30px;
 }
 
 .profile p {
+  font-weight: 100;
   font-size: 18px;
+}
+
+.profilePic {
+  width: 35%;
+  border-radius: 50%;
+  border: 3px white solid;
 }
 
 .timeframes {
@@ -53,9 +62,22 @@ body {
   background: var(--dark-blue);
   font-family: Rubik;
   text-align: left;
-  padding: 20px;
   border-radius: var(--icon-card-border-radius);
-  height: 265px;
+  width: 285px;
+  height: 200px;
+  margin-top: 75px;
+  margin-left: -30px;
+  padding: 33px 20px 7px 20px;
+}
+
+.timeframes p {
+  color: var(--desaturated-blue);
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.timeframes:hover > p {
+  color: white;
 }
 
 .cards {
@@ -72,9 +94,6 @@ body {
   font-weight: 700;
   font-size: 18px;
   border-radius: var(--icon-card-border-radius);
-}
-.timeframes {
-  margin-top: 247px;
 }
 
 .icon {
