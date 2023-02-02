@@ -13,7 +13,7 @@ import {
 } from "./components/Icons";
 
 function App() {
-  const [user, setUser] = useState("Tova");
+  const [user, setUser] = useState("Jeremy Robson");
   const icons = {
     Work: WorkIcon,
     Play: PlayIcon,

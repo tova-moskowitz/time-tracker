@@ -13,7 +13,7 @@ function Card({ title, iconComponent }) {
       <div className="title">
         {title}
         <div className="hours">
-          <p className="currentHours">10hrs</p>
+          <p className="currentHours">32hrs</p>
           <p className="previousHours">Last Week: 2hrs</p>
         </div>
       </div>
@@ -22,6 +22,3 @@ function Card({ title, iconComponent }) {
 }
 
 export default Card;
-
-//card will have 2 divs, one on top of the other
-//icon card with have background color + icon
