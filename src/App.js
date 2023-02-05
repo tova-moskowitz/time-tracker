@@ -38,9 +38,11 @@ function App() {
           {data.map((type) => {
             return (
               <Card
+                key={type.title}
                 title={type.title}
                 iconComponent={icons[type.title]}
                 currentTimeframe={currentTimeframe}
+                timeframes={type}
               />
             );
           })}

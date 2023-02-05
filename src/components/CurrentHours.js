@@ -1,11 +1,13 @@
 import "../style/App.css";
 
-function CurrentHours({}) {
-  return (
-    <>
-      <p className="currentHours">32hrs</p>
-    </>
-  );
+function CurrentHours({ timeframes, title }) {
+  return timeframes.map((timeframe) => {
+    if (timeframe.title === title) {
+      return (
+        <p className="currentHours">{timeframe.timeframes.weekly.current}hrs</p>
+      );
+    }
+  });
 }
 
 export default CurrentHours;

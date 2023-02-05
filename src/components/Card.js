@@ -14,8 +14,8 @@ function Card({ title, iconComponent, currentTimeframe, timeframes }) {
       <div className="title">
         <p className="titleName">{title}</p>
         <div className="hours"></div>
-        <CurrentHours timeframes={timeframes} />
-        <PreviousHours timeframes={timeframes} />
+        <CurrentHours timeframes={[timeframes]} title={title} />
+        <PreviousHours timeframes={[timeframes]} title={title} />
       </div>
     </div>
   );
