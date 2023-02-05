@@ -1,10 +1,11 @@
 import "../style/App.css";
 import React, { useState } from "react";
+import CurrentHours from "./CurrentHours";
+import PreviousHours from "./PreviousHours";
 
-function Card({ title, iconComponent, currentTimeframe }) {
+function Card({ title, iconComponent, currentTimeframe, timeframes }) {
   const titleClass = title.toLowerCase().replace(" ", "");
   const Icon = iconComponent;
-  console.log(currentTimeframe);
   return (
     <div className={`card ${titleClass}`}>
       <div className="icon">
@@ -12,10 +13,9 @@ function Card({ title, iconComponent, currentTimeframe }) {
       </div>
       <div className="title">
         <p className="titleName">{title}</p>
-        <div className="hours">
-          <p className="currentHours">32hrs</p>
-          <p className="previousHours">Last Week: 2hrs</p>
-        </div>
+        <div className="hours"></div>
+        <CurrentHours timeframes={timeframes} />
+        <PreviousHours timeframes={timeframes} />
       </div>
     </div>
   );
