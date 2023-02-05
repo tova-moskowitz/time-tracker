@@ -43,7 +43,7 @@ body {
   font-size: 60px;
   padding: 30px;
   grid-row: 1 / 3;
-  z-index: 2;
+  z-index: 1;
 }
 
 .timeframes {
@@ -106,12 +106,12 @@ body {
 .currentHours {
   font-size: 70px;
   font-weight: normal;
-  padding-left: 25px;
+  padding-left: 30px;
   margin: 0;
 }
 
 .previousHours {
-  margin: 0 30px;
+  margin: 10px 30px;
   color: var(--pale-blue);
 }
 
@@ -124,7 +124,7 @@ body {
 }
 
 .titleName {
-  padding: 20px 50px;
+  padding: 40px 0 0 35px;
   font-size: 25px;
 }
 
