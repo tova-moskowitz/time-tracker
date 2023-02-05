@@ -1,10 +1,10 @@
 import "../style/App.css";
 import React, { useState } from "react";
 
-function Card({ title, iconComponent }) {
+function Card({ title, iconComponent, currentTimeframe }) {
   const titleClass = title.toLowerCase().replace(" ", "");
   const Icon = iconComponent;
-
+  console.log(currentTimeframe);
   return (
     <div className={`card ${titleClass}`}>
       <div className="icon">

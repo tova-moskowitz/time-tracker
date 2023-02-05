@@ -1,5 +1,6 @@
 import "../style/App.css";
 import ProfilePic from "../images/image-jeremy.png";
+import Timeframes from "./Timeframes";
 
 function UserProfileCard({ user, clickHandler }) {
   return (
@@ -10,17 +11,7 @@ function UserProfileCard({ user, clickHandler }) {
           <p>Report For </p>
           <span className="userName">{user}</span>
         </div>
-        <div className="timeframes">
-          <p onClick={clickHandler} className="daily">
-            Daily
-          </p>
-          <p onClick={clickHandler} className="weekly">
-            Weekly
-          </p>
-          <p onClick={clickHandler} className="monthly">
-            Monthly
-          </p>
-        </div>
+        <Timeframes clickHandler={clickHandler} />
       </div>
     </>
   );

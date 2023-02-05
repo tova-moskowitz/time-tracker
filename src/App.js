@@ -14,7 +14,7 @@ import {
 
 function App() {
   const [user, setUser] = useState("Jeremy Robson");
-  const [timeframe, setTimeframe] = useState("daily");
+  const [currentTimeframe, setCurrentTimeframe] = useState("daily");
   const icons = {
     Work: WorkIcon,
     Play: PlayIcon,
@@ -25,8 +25,8 @@ function App() {
   };
 
   const clickHandler = (e) => {
-    setTimeframe(e.target.className);
-    e.target.classList.add("active");
+    setCurrentTimeframe(e.target.className);
+    // e.target.classList.add("active");
   };
 
   return (
@@ -37,7 +37,11 @@ function App() {
         <div className="cards">
           {data.map((type) => {
             return (
-              <Card title={type.title} iconComponent={icons[type.title]} />
+              <Card
+                title={type.title}
+                iconComponent={icons[type.title]}
+                currentTimeframe={currentTimeframe}
+              />
             );
           })}
         </div>
@@ -47,10 +51,3 @@ function App() {
 }
 
 export default App;
-
-/* 
-- header
-- flexbox with: user profile flexbox, and cards grid
-- flexbox with: UserProfileCard and timeframes list (column)
-- grid with all the cards in it
-*/
