@@ -14,6 +14,7 @@ import {
 
 function App() {
   const [user, setUser] = useState("Jeremy Robson");
+  const [timeframe, setTimeframe] = useState("daily");
   const icons = {
     Work: WorkIcon,
     Play: PlayIcon,
@@ -23,17 +24,19 @@ function App() {
     "Self Care": SelfCareIcon,
   };
 
+  const clickHandler = (e) => {
+    setTimeframe(e.target.className);
+    e.target.classList.add("active");
+  };
+
   return (
     <div className="App">
       <header> {user}'s Time Tracker</header>
       <div className="wrapper">
-        <div className="profileCard">
-          <UserProfileCard user={user} />
-        </div>
+        <UserProfileCard clickHandler={clickHandler} user={user} />
         <div className="cards">
           {data.map((type) => {
             return (
-              // <p>HELLO</p>
               <Card title={type.title} iconComponent={icons[type.title]} />
             );
           })}

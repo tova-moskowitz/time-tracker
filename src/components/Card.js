@@ -11,7 +11,7 @@ function Card({ title, iconComponent }) {
         <Icon />
       </div>
       <div className="title">
-        <p>{title}</p>
+        <p className="titleName">{title}</p>
         <div className="hours">
           <p className="currentHours">32hrs</p>
           <p className="previousHours">Last Week: 2hrs</p>
