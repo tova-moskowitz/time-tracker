@@ -3,7 +3,7 @@ import "../style/App.css";
 import ProfilePic from "../images/image-jeremy.png";
 import Timeframes from "./Timeframes";
 
-function UserProfileCard({ user, clickHandler }) {
+function UserProfileCard({ user, clickHandler, activeTimeframe }) {
   return (
     <>
       <div className="profileWrapper">
@@ -12,7 +12,10 @@ function UserProfileCard({ user, clickHandler }) {
           <p>Report For </p>
           <span className="userName">{user}</span>
         </div>
-        <Timeframes clickHandler={clickHandler} />
+        <Timeframes
+          clickHandler={clickHandler}
+          activeTimeframe={activeTimeframe}
+        />
       </div>
     </>
   );

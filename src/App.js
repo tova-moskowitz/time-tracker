@@ -13,7 +13,6 @@ import {
 } from "./components/Icons";
 
 function App() {
-  // const [isActiveTimeframe, setIsActiveTimeframe] = useState(false);
   const [user, setUser] = useState("Jeremy Robson");
   const [activeTimeframe, setactiveTimeframe] = useState("weekly");
   const icons = {
@@ -27,15 +26,17 @@ function App() {
 
   const clickHandler = (timeframe) => {
     setactiveTimeframe(timeframe);
-    // setIsActiveTimeframe(true);
-    // e.target.classList.add("active");
   };
 
   return (
     <div className="App">
       <header> {user}'s Time Tracker</header>
       <div className="wrapper">
-        <UserProfileCard clickHandler={clickHandler} user={user} />
+        <UserProfileCard
+          clickHandler={clickHandler}
+          user={user}
+          activeTimeframe={activeTimeframe}
+        />
         <div className="cards">
           {allActivities.map((activity) => {
             return (
