@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./style/App.css";
-import data from "./data/data.json";
+import allActivities from "./data/data.json";
 import Card from "./components/Card";
 import UserProfileCard from "./components/UserProfileCard";
 import {
@@ -35,14 +35,14 @@ function App() {
       <div className="wrapper">
         <UserProfileCard clickHandler={clickHandler} user={user} />
         <div className="cards">
-          {data.map((type) => {
+          {allActivities.map((activity) => {
             return (
               <Card
-                key={type.title}
-                title={type.title}
-                iconComponent={icons[type.title]}
+                key={activity.title}
+                activityTitle={activity.title}
+                iconComponent={icons[activity.title]}
                 currentTimeframe={currentTimeframe}
-                timeframes={type}
+                activity={activity}
               />
             );
           })}
