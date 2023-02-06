@@ -1,34 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import "../style/App.css";
 import cn from "classnames";
 
 function Timeframes({ clickHandler }) {
+  const [activeTimeframe, setActiveTimeframe] = useState("weekly");
   return (
     <>
       <div className="timeframes">
         <p
           onClick={() => {
             clickHandler("daily");
+            setActiveTimeframe("daily");
           }}
-          // className={cn("daily", {
-          //   active: 1 > 2,
-          // })}
+          className={cn("daily", {
+            active: activeTimeframe === "daily",
+          })}
         >
           Daily
         </p>
         <p
           onClick={() => {
             clickHandler("weekly");
+            setActiveTimeframe("weekly");
           }}
-          className="weekly"
+          className={cn("weekly", {
+            active: activeTimeframe === "weekly",
+          })}
         >
           Weekly
         </p>
         <p
           onClick={() => {
             clickHandler("monthly");
+            setActiveTimeframe("monthly");
           }}
-          className="monthly"
+          className={cn("monthly", {
+            active: activeTimeframe === "monthly",
+          })}
         >
           Monthly
         </p>
