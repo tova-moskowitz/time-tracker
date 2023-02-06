@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import CurrentHours from "./CurrentHours";
 import PreviousHours from "./PreviousHours";
 
-function Card({ title, iconComponent, currentTimeframe, timeframes }) {
+function Card({ title, iconComponent, timeframes }) {
   const titleClass = title.toLowerCase().replace(" ", "");
   const Icon = iconComponent;
   return (
