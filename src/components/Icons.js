@@ -1,5 +1,5 @@
-import "../style/App.css";
 import React from "react";
+import "../style/App.css";
 import workIconSrc from "../images/icon-work.svg";
 import playIconSrc from "../images/icon-play.svg";
 import studyIconSrc from "../images/icon-study.svg";

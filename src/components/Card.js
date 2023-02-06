@@ -1,5 +1,5 @@
 import "../style/App.css";
-import React, { useState } from "react";
+import React from "react";
 import CurrentHours from "./CurrentHours";
 import PreviousHours from "./PreviousHours";
 

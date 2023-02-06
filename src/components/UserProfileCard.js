@@ -1,3 +1,4 @@
+import React from "react";
 import "../style/App.css";
 import ProfilePic from "../images/image-jeremy.png";
 import Timeframes from "./Timeframes";

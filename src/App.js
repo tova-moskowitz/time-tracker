@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./style/App.css";
 import data from "./data/data.json";
 import Card from "./components/Card";
