@@ -14,7 +14,7 @@ import {
 
 function App() {
   const [user, setUser] = useState("Jeremy Robson");
-  const [currentTimeframe, setCurrentTimeframe] = useState("daily");
+  const [currentTimeframe, setCurrentTimeframe] = useState("weekly");
   const icons = {
     Work: WorkIcon,
     Play: PlayIcon,
