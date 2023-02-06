@@ -1,16 +1,16 @@
 import React from "react";
 import "../style/App.css";
 
-function CurrentHours({ weekly, daily, monthly, currentTimeframe }) {
-  if (currentTimeframe === "daily") {
+function CurrentHours({ weekly, daily, monthly, activeTimeframe }) {
+  if (activeTimeframe === "daily") {
     return <p className="currentHours">{daily.current}hrs</p>;
   }
 
-  if (currentTimeframe === "weekly") {
+  if (activeTimeframe === "weekly") {
     return <p className="currentHours">{weekly.current}hrs</p>;
   }
 
-  if (currentTimeframe === "monthly") {
+  if (activeTimeframe === "monthly") {
     return <p className="currentHours">{monthly.current}hrs</p>;
   }
 }

@@ -3,8 +3,11 @@ import React from "react";
 import CurrentHours from "./CurrentHours";
 import PreviousHours from "./PreviousHours";
 
-function Card({ activityTitle, iconComponent, activity, currentTimeframe }) {
-  const titleClass = activityTitle.toLowerCase().replace(" ", "");
+function Card({ iconComponent, activity, activeTimeframe }) {
+  const { title, timeframes } = activity;
+  const { daily, weekly, monthly } = timeframes;
+
+  const titleClass = title.toLowerCase().replace(" ", "");
   const Icon = iconComponent;
 
   return (
@@ -13,19 +16,19 @@ function Card({ activityTitle, iconComponent, activity, currentTimeframe }) {
         <Icon />
       </div>
       <div className="title">
-        <p className="titleName">{activityTitle}</p>
+        <p className="titleName">{title}</p>
         <div className="hours"></div>
         <CurrentHours
-          currentTimeframe={currentTimeframe}
-          weekly={activity.timeframes.weekly}
-          daily={activity.timeframes.daily}
-          monthly={activity.timeframes.monthly}
+          activeTimeframe={activeTimeframe}
+          weekly={weekly}
+          daily={daily}
+          monthly={monthly}
         />
         <PreviousHours
-          currentTimeframe={currentTimeframe}
-          weekly={activity.timeframes.weekly}
-          daily={activity.timeframes.daily}
-          monthly={activity.timeframes.monthly}
+          activeTimeframe={activeTimeframe}
+          weekly={weekly}
+          daily={daily}
+          monthly={monthly}
         />
       </div>
     </div>

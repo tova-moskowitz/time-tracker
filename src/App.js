@@ -13,8 +13,9 @@ import {
 } from "./components/Icons";
 
 function App() {
+  // const [isActiveTimeframe, setIsActiveTimeframe] = useState(false);
   const [user, setUser] = useState("Jeremy Robson");
-  const [currentTimeframe, setCurrentTimeframe] = useState("weekly");
+  const [activeTimeframe, setactiveTimeframe] = useState("weekly");
   const icons = {
     Work: WorkIcon,
     Play: PlayIcon,
@@ -24,8 +25,9 @@ function App() {
     "Self Care": SelfCareIcon,
   };
 
-  const clickHandler = (e) => {
-    setCurrentTimeframe(e.target.className);
+  const clickHandler = (timeframe) => {
+    setactiveTimeframe(timeframe);
+    // setIsActiveTimeframe(true);
     // e.target.classList.add("active");
   };
 
@@ -39,9 +41,8 @@ function App() {
             return (
               <Card
                 key={activity.title}
-                activityTitle={activity.title}
                 iconComponent={icons[activity.title]}
-                currentTimeframe={currentTimeframe}
+                activeTimeframe={activeTimeframe}
                 activity={activity}
               />
             );

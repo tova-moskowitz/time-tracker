@@ -60,6 +60,14 @@ body {
   grid-column: 1 / 2;
 }
 
+.timeframes :hover {
+  color: white;
+}
+
+.timeframes .active {
+  color: white;
+}
+
 .profile p {
   font-weight: 100;
   font-size: 18px;
