@@ -28,7 +28,7 @@ body {
   position: relative;
   display: grid;
   grid-template-columns: 325px 1fr;
-  margin: 125px 200px;
+  margin: 200px;
 }
 
 .profileWrapper {
