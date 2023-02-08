@@ -25,14 +25,13 @@ body {
 }
 
 .App {
-  /* border: 3px red solid; */
   min-width: 1440px;
 }
 
 .wrapper {
   display: grid;
-  grid-template-columns: 325px 1fr;
-  /* border: 3px lightgreen solid; */
+  grid-template-columns: 325px minmax(0, 0.85fr);
+  margin: 225px;
 }
 
 .profileWrapper {
